@@ -1,0 +1,41 @@
+.model small
+.stack 100
+.data   
+    cr equ 0dh
+    nl equ 0ah
+    msg1 db 'Enter 1st ',cr,nl,'$'
+    msg2 db cr,nl,'Entered input is: $'
+    
+.code                          
+main proc
+            
+        mov ax,@data
+        mov ds,ax
+        lea dx,msg1
+        mov ah,9
+        int 21h 
+          
+        
+        mov ah,1
+        int 21h
+        mov a,al
+        
+        lea dx,msg2
+        mov ah,9
+        int 21h 
+              
+        mov dl,a
+        mov ah,9
+        int 21h
+        
+        lea dx,msg4
+        mov ah,9
+        int 21h 
+        
+        lea dx,msg3
+        int 21h
+        
+        proc endp
+        end main
+        
+            
