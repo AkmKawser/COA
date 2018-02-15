@@ -1,0 +1,40 @@
+;A dile a
+
+.model small
+.stack 100
+.data   
+    cr equ 0dh
+    nl equ 0ah
+    msg1 db 'Enter 1st Input: $'
+    msg2 db cr,nl,'Output: $'
+    
+.code                          
+main proc
+            
+        mov ax,@data
+        mov ds,ax
+        lea dx,msg1
+        mov ah,9
+        int 21h 
+          
+        
+        mov ah,1
+        int 21h
+        mov bl,al
+        
+        add bl,32d
+        
+        lea dx,msg2
+        mov ah,9
+        int 21h 
+              
+        mov dl,bl
+        mov ah,2
+        int 21h
+        
+        
+        
+        proc endp
+        end main
+        
+            
