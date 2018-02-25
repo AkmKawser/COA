@@ -1,0 +1,185 @@
+Type1:Fixed value initialization kore addition. 
+.model small
+
+.stack 100h
+
+.code
+
+main proc
+    
+     
+     
+     mov bh,2
+     
+     add bh, 30h
+     
+     mov ah,2
+     
+     mov dl, bh
+     
+     int 21h
+     
+     mov dl, '+'
+     
+     int 21h
+     
+     mov ch, 3
+     
+     add ch,30h
+     
+     mov dl, ch
+     
+     int 21h
+     
+     mov dl, '='
+     
+     int 21h
+     
+     
+     add bh,ch 
+     
+     mov dl, bh
+     
+     int 21h
+     
+     main endp
+
+end main
+
+++++++++++++++++++
+Halka edit ( output er value milanor jonno subtract kore nici)
+
+
+.model small
+
+.stack 100h
+
+.code
+
+main proc
+    
+     
+     
+     mov bh,2
+     
+     add bh, 30h
+     
+     mov ah,2
+     
+     mov dl, bh
+     
+     int 21h
+     
+     mov dl, '+'
+     
+     int 21h
+     
+     mov ch, 3
+     
+     add ch,30h
+     
+     mov dl, ch
+     
+     int 21h
+     
+     mov dl, '='
+     
+     int 21h
+     
+     
+     add bh,ch 
+     
+     sub bh, 30h       ;Sub kore "e" ta change korbo .e er hexa value 65h. amra dekha chai 5. tai 65h-33h korbo. 
+              
+     mov dl, bh
+     
+     int 21h
+     
+     main endp
+
+end main
+
+
+-----------
+
+Type: 2 ta value input niye addition.
+
+.model small
+.stack 100h
+.code
+main proc
+    
+    mov ah,1
+    
+    int 21h
+    mov bh,al
+    
+    int 21h    
+    mov ch,al 
+              
+    mov ah,2
+    mov dl,0Dh
+    int 21h  
+    mov dl,0Ah
+    int 21h
+    
+    mov dl,bh
+    int 21h
+    
+    mov dl,'+'
+    int 21h
+             
+    mov dl,ch
+    int 21h 
+    
+    mov dl,'='
+    int 21h 
+    
+   
+    add bh,ch
+    
+    
+    sub bh,30h
+    mov dl,bh
+    int 21h
+    
+    
+    
+    
+    main endp
+end main
+
+
+
+
++++++++++++++
+Type 3: 1 ta value input arekta value fixed. 
+.model small
+.stack 100h
+.code
+main proc
+    
+    mov ah,1
+    int 21h
+    mov bh,al
+    mov ah,2
+    mov dl,'+' 
+    int 21h
+    mov ch,5
+    add ch,30h
+    mov dl,ch
+    int 21h
+    add bh,ch
+    sub bh,30h
+    mov ah,2
+    mov dl,'='
+    int 21h
+    mov dl,bh
+    int 21h
+    
+    
+    
+    
+    main endp
+end main
+                                                                               
