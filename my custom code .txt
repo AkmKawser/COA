@@ -1,0 +1,24 @@
+ .MODEL SMALL
+ .STACK 100H
+ .DATA
+ .CODE
+ 
+ MAIN PROC        
+    MOV AX,@DATA  ;FOR STRING TO COMMUNICATE WITH .CODE AND .DATA
+    MOV DS,AX     ;FOR STRING TO COMMUNICATE WITH .CODE AND .DATA  
+    
+    
+    
+    
+    MOV AH,2      ;FOR NEWLINE
+    MOV DL,10     ;FOR NEWLINE
+    INT 21H       ;FOR NEWLINE
+    MOV DL,13     ;FOR NEWLINE
+    INT 21H       ;FOR NEWLINE       
+    
+   
+    
+    
+    MAIN ENDP
+ END MAIN 
+                    
