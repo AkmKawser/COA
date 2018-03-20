@@ -1,0 +1,222 @@
+ Mov bh,30h  
+ cmp bh,30h
+ jge L1 
+ jmp Else
+
+ L1:
+ 
+ Cmp bh,35h
+ jle L2
+ jmp ELSE
+ 
+ L2:
+ mov ah,2
+ mov dl,'I'
+ int  21h  
+ jmp Exit
+ 
+ Else:
+ mov ah,2 
+ mov dl,'o' 
+ 
+ Exit: 
+ mov ah,4ch
+ int 21h
+ 
+UNSIGNED AND SIGNED ER CODE:
+
+
+MAIN PROC
+    
+    MOV BH, 00fh
+    
+    CMP BH, 30H
+    
+    JAE  L1 ; unsigned er jonno
+    
+    JMP ELSE
+    
+    
+    L1:
+    
+    
+    CMP BH, 35H
+    
+    JBE L2  ; 
+    
+    JMP ELSE
+    
+    
+    L2:
+    
+    MOV AH, 2
+    
+    MOV DL, 'I'
+    
+    INT 21H
+         
+    JMP EXIT
+    
+    ELSE:
+    
+    MOV AH, 2
+    
+    MOV DL, 'O'
+    
+    INT 21H 
+    
+    
+          
+    EXIT:
+    
+    MOV AH, 4CH 
+    
+    INT 21H
+
+
+IF ((I==0)) || (I< -1))
+--------------------------
+
+MOV BH, 21H  
+
+MOV AH, 2
+
+CMP BH, 30H
+
+JE   L1
+
+CMP BH, 0FFH
+
+JL L1
+
+JMP ELSE_IF
+
+L1:
+
+  
+   MOV DL, 'Y'
+   
+   INT 21H
+   
+   JMP EXIT
+   
+   
+   ELSE_IF:
+   
+          CMP BH, 20
+          
+          JG L2
+          
+          JMP ELSE
+          
+
+L2:
+
+    CMP BH, 25
+    
+    JLE L3
+    
+    JMP ELSE
+    
+L3:
+
+   MOV DL, 'N'
+   
+   INT 21H
+   
+   JMP EXIT
+   
+ELSE:
+
+     
+      MOV DL, 'D'
+      
+      INT 21H
+      
+EXIT:
+    
+     MOV AH, 4CH
+     
+     INT 21H      
+
+
+ekhon ekhbo keno always hexa value use kora better :
+
+
+Mov ah,1  ; user input dilam
+int 21H    ; user input dilam
+mov bh,al ; user input dilam
+MOV AH, 2 ; user input dilam
+
+CMP BH, 30h  ; kintu ekhane jodi decimal use korei zemon -1 tahole error hobe.   
+
+JE   L1
+
+CMP BH,-1
+
+JL L1
+
+JMP ELSE_IF
+
+L1:
+
+  
+   MOV DL, 'Y'
+   
+   INT 21H
+   
+   JMP EXIT
+   
+   
+   ELSE_IF:
+   
+          CMP BH, 20
+          
+          JG L2
+          
+          JMP ELSE
+          
+
+L2:
+
+    CMP BH, 25
+    
+    JLE L3
+    
+    JMP ELSE
+    
+L3:
+
+   MOV DL, 'N'
+   
+   INT 21H
+   
+   JMP EXIT
+   
+ELSE:
+
+     
+      MOV DL, 'D'
+      
+      INT 21H
+      
+EXIT:
+    
+     MOV AH, 4CH
+     
+     INT 21H      
+
+
+
+loop :
+
+mov ah,2
+mov cx,5
+
+
+t1:
+mov dl,'*'
+int 21h
+loop t1
+
+
