@@ -4,7 +4,7 @@ INT 21H
                  ;tokhon e likhte hoi jokhon amra jei input nibo setai output e dekhate chia. 
 
 CMP AL,34H       ;AL e rakhe compare kortesi karon "RUNTIME" e input jai dei ta auto AL e store hoy.But prefdefine kore dile jei register                  ; e rekhechi oitai CMP korbo. 
-JG  IFTRUE      ;conditional er part tuku.condition T hole IFTRUE block e jabe.condition F hole IFFALSE block e jabe.  
+JG  IFTRUE       ;conditional er part tuku.condition T hole IFTRUE block e jabe.condition F hole IFFALSE block e jabe.  
 JMP IFFALSE      ;condtion false hole always JMP use korbo.
 
 
@@ -17,3 +17,7 @@ INT 21H
 IFFALSE:
 MOV AH,4CH       ; ei code ta likhle DOS MODE exit hoi.mane bar bar NOP likhata ase na. off hoye jai. 
 INT 21H          
+
+; ei code e if chara onno kono coditional statement (else,elseif) nai. tai codition false hole direct exit hobe. but jodi if er sathe 
+;onno kono conditional statement thake tahole if true hole take exit korar jonno arekta block likhte hobe. noito if o execute korbe 
+;if er sathe jeta thakbe (else ba elseif) setao exicute korbe 
