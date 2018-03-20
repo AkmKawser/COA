@@ -4,7 +4,7 @@ INT 21H
                  ;tokhon e likhte hoi jokhon amra jei input nibo setai output e dekhate chia. 
 
 CMP AL,34H       ;AL e rakhe compare kortesi karon input jai dei ta auto AL e store hoy
-JGE  IFTRUE      ;conditional er part tuku.condition T hole IFTRUE block e jabe.condition F hole IFFALSE block e jabe.  
+JG  IFTRUE      ;conditional er part tuku.condition T hole IFTRUE block e jabe.condition F hole IFFALSE block e jabe.  
 JMP IFFALSE      ;condtion false hole always JMP use korbo.
 
 
