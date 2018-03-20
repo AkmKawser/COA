@@ -1,0 +1,8 @@
+MOV CX,5    ;how many times to print something.Always cx e rakhte hobe.
+
+T1:
+MOV AH,2                                                                                                                                          
+MOV DL,'*'   ;direct input diye dilam. ar user prompt chaile mov ah,1 int 21h mov bl,al eisob ager niyome likhte hobe. then mov dl,bl likhlei input ta print korbe.
+INT 21H
+LOOP T1     ;loop keyword     
+                                
