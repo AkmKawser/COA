@@ -10,10 +10,10 @@ JMP IFFALSE      ;condtion false hole always JMP use korbo.
 
 IFTRUE:
 MOV AH,2
-MOV DL,"T"       ; IF block er vetorer kaj gula likhlamn
+MOV DL,"T"       ; IF block er vetorer kaj gula likhlamn. jehetu print er kaj chilo tai print er code gula likhsi.
 INT 21H                  
 
 
 IFFALSE:
-MOV AH,4CH
-INT 21H
+MOV AH,4CH       ; ei code ta likhle DOS MODE exit hoi.mane bar bar NOP likhata ase na. off hoye jai. 
+INT 21H          
