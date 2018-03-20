@@ -1,33 +1,5 @@
- Mov bh,30h  
- cmp bh,30h
- jge L1 
- jmp Else
-
- L1:
- 
- Cmp bh,35h
- jle L2
- jmp ELSE
- 
- L2:
- mov ah,2
- mov dl,'I'
- int  21h  
- jmp Exit
- 
- Else:
- mov ah,2 
- mov dl,'o' 
- 
- Exit: 
- mov ah,4ch
- int 21h
- 
 UNSIGNED AND SIGNED ER CODE:
-
-
-MAIN PROC
-    
+-------------------------------    
     MOV BH, 00fh
     
     CMP BH, 30H
