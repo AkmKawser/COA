@@ -1,7 +1,7 @@
 MOV CH,20D  ;FIXED INPUT
 
 CMP CH ,030H  
-JG  IFTRUE
+JG  IFTRUE                     ; ekhane JL ar nicher line e JG hoyar kotha na?
 JL  IFFALSEGOTOELSEIF  
 JMP ELSEIFFALSEGOTOELSE
  
