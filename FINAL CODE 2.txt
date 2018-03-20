@@ -27,7 +27,9 @@ IFEND:      ;IF false hole ELSEIF exicute hobe. but If kintu exit kora hoy nai.i
 MOV 4H,4CH
 INT 21H
 
-
+if er sathe 
+;onno kono conditional statement thake tahole if true hole take exit korar jonno arekta block likhte hobe. noito if o execute korbe 
+;if er sathe jeta thakbe (else ba elseif) setao exicute korbe.ei code e else ache. so if block true hole setake exit korar jonno arekta block likhte hoyeche.
 
 
  
