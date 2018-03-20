@@ -1,0 +1,33 @@
+MOV CH,34H  ;FIXED INPUT
+
+
+CMP CH,30H
+JGE IFTRUE
+JMP IFFALSEGOTOELSE
+
+
+
+IFTRUE:
+
+MOV AH,2
+MOV DL,"P"
+;INT 21H    ; ekhane jodi interrupt dao tahole IFEND block er interreupt ta katte hobe. Vice versa.
+JMP IFEND
+
+
+IFFALSEGOTOELSE:
+
+MOV AH,2
+MOV DL,"N"
+INT 21H
+
+
+IFEND:      ;IF false hole ELSEIF exicute hobe. but If kintu exit kora hoy nai.if exit korar jonno IFEND block ta IFTRUE  er vetor rakhlam. 
+
+MOV 4H,4CH
+INT 21H
+
+
+
+
+ 
