@@ -8,7 +8,6 @@ JMP IFFALSEGOTOELSE
 
 
 IFTRUE:
-
 MOV AH,2
 MOV DL,"P"
 ;INT 21H    ; ekhane jodi interrupt dao tahole IFEND block er interreupt ta katte hobe. Vice versa.
@@ -16,20 +15,17 @@ JMP IFEND
 
 
 IFFALSEGOTOELSE:
-
 MOV AH,2
 MOV DL,"N"
 INT 21H
 
 
-IFEND:      ;IF false hole ELSEIF exicute hobe. but If kintu exit kora hoy nai.if exit korar jonno IFEND block ta IFTRUE  er vetor rakhlam. 
-
+IFEND:      ;IF false hole ELSEIF exicute hobe. but If kintu exit kora hoy nai.if exit korar jonno IFEND block ta IFTRUE  er vetor                     ;rakhlam. 
 MOV 4H,4CH
 INT 21H
 
-if er sathe 
-;onno kono conditional statement thake tahole if true hole take exit korar jonno arekta block likhte hobe. noito if o execute korbe 
-;if er sathe jeta thakbe (else ba elseif) setao exicute korbe.ei code e else ache. so if block true hole setake exit korar jonno arekta block likhte hoyeche.
+;if er sathe onno kono conditional statement thake tahole if true hole take exit korar jonno arekta block likhte hobe. noito if o execute ;korbe 
+;if er sathe jeta thakbe (else ba elseif) setao exicute korbe.ei code e else ache. so if block true hole setake exit korar jonno arekta ;block likhte hoyeche.
 
 
  
