@@ -1,7 +1,7 @@
 MOV CH,20D  ;FIXED INPUT
 
 CMP CH ,030H  
-JG  IFTRUE                     ; ekhane JL ar nicher line e JG hoyar kotha na?
+JG  IFTRUE                     ; ekhane JL ar nicher line e JG hoyar kotha na?But seta korle output ulta ase keno? 
 JL  IFFALSEGOTOELSEIF  
 JMP ELSEIFFALSEGOTOELSE
  
