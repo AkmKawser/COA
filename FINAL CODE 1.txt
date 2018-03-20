@@ -1,16 +1,16 @@
 MOV AH,1
 INT 21H
-;MOV BL,AL   " ei line ta dekhanor kono dorkar nai. karon ei lineta
-;tikhon e likhte hoi jokhon amra jei input nibo setai output e dekhate chia. 
+;MOV BL,AL       ei line ta dekhanor kono dorkar nai. karon ei lineta
+                 ;tokhon e likhte hoi jokhon amra jei input nibo setai output e dekhate chia. 
 
-CMP AL,34H       ;AL e rakhsi karon input jai dei ta auto AL e store hoy
-JGE  IFTRUE       ;conditional er part tuku.condition T hole IFTRUE te jabe.condition F hole IFFALSE level e jabe.  
-JMP IFFALSE
+CMP AL,34H       ;AL e rakhe compare kortesi karon input jai dei ta auto AL e store hoy
+JGE  IFTRUE      ;conditional er part tuku.condition T hole IFTRUE block e jabe.condition F hole IFFALSE block e jabe.  
+JMP IFFALSE      ;condtion false hole always JMP use korbo.
 
 
 IFTRUE:
 MOV AH,2
-MOV DL,"T"               ; IF block er vetorer kaj gula likhlamn
+MOV DL,"T"       ; IF block er vetorer kaj gula likhlamn
 INT 21H                  
 
 
